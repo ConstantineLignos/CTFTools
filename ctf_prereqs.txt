@@ -1,0 +1,14 @@
+libstdc++.i686
+compat-libstdc++-33.i686
+libXp.i686
+libXt.i686
+libXpm.i686
+libXaw.i686
+openmotif.i686
+openmotif22.i686
+openmotif-devel.i686
+netpbm.i686
+qhull.i686
+tk
+xdialog
+xorg-x11-fonts*
