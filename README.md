@@ -61,7 +61,14 @@ Installation instructions
    xprint are not installed, this also does not appear to be a
    problem.
 
-8. [TODO: Environment variables]
+8. Set the `CTF_DIR` environment variable and add the CTF tools to
+    your `PATH`. If you use bash, you can simply add the following to
+    the end of your .bashrc file. If you want to customize where the
+    CTF tools look for files, set `CTF_DATADIR` and `CTF_WORKDIR`.
+    ```
+    export CTF_DIR=/opt/ctf
+    export PATH=$PATH:$CTF_DIR/bin
+    ```
 
 9. Restart and log back in. Everything should work at this point.
 
@@ -74,7 +81,7 @@ Notes
    is an issue.
 
 2. The packages installed (`ctf_prereqs.txt`) are not guaranteed to be
-   a minimal set, but it does appear to be adequate.
+   a minimal set, but they do appear to be adequate.
 
 3. Although xprint is installed in the procedure above, printing from
    the CTF programs does not appear to work.
