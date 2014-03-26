@@ -49,15 +49,17 @@ Installation instructions
     ./CTF.install
     ```
 
-7. During installation, you generally want to give the default
-   answer by hitting enter. The non-default answers you will need to
-   specify are the path of the source directory for the install
-   (`/mnt/iso` in the example above) and "Skip" (3) when asked which
-   electronics system is in use. During installation, the installer
-   will complain about a number of things not being installed already
-   (i.e., Open Motif, Open Motif 2.1, netpbm, Xprint). Its
-   attempts to install most of them will fail. This is okay; you have
-   already installed the needed prereqs.
+7. During installation, you generally want to give the default answer
+   by hitting enter. The non-default answers you will need to specify
+   are the path of the source directory for the install (`/mnt/iso` in
+   the example above) and "Skip" (3) when asked which electronics
+   system is in use. During installation, the installer will complain
+   about a number of things not being installed already (i.e., Open
+   Motif, Open Motif 2.1, netpbm, Xprint). Its attempts to install
+   openmotif and xprint will fail. This is okay; you have already
+   installed the needed prereqs. It will also report that netpbm and
+   xprint are not installed, this also does not appear to be a
+   problem.
 
 8. [TODO: Environment variables]
 
@@ -73,3 +75,6 @@ Notes
 
 2. The packages installed (`ctf_prereqs.txt`) are not guaranteed to be
    a minimal set, but it does appear to be adequate.
+
+3. Although xprint is installed in the procedure above, printing from
+   the CTF programs does not appear to work.
