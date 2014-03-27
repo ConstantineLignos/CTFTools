@@ -77,8 +77,7 @@ Notes
 
 1. The restart indicated above probably isn't strictly necessary, but
    it did solve a mysterious issue with some tools segfaulting when
-   run. It is very likely just logging in and out is enough if restarting
-   is an issue.
+   run. It is very likely just logging in and out is enough.
 
 2. The packages installed (`ctf_prereqs.txt`) are not guaranteed to be
    a minimal set, but they do appear to be adequate.
