@@ -1,15 +1,16 @@
 This repository provides instructions for installing CTF MEG/EEG
-software suite. Specifically, it has been tested on CentOS 6.5 and
+software suite. Specifically, it has been tested on CentOS 6.6 and
 release 5.4.0 of the CTF software. All actions below must be performed
 with root privileges (i.e., `su root`).
 
 Installation instructions
 =========================
 
-1. Install CentOS 6 64-bit (x86_64) onto a real or virtual machine
-   using an ISO from http://isoredirect.centos.org/centos/6/isos/x86_64/.
-   When this guide was written, 6.5 was the current version. Bring your
-   installation up to date after installation (e.g., `yum update`).
+1. Install CentOS 6 32-bit (i386) onto a real or virtual machine using
+   an ISO from http://isoredirect.centos.org/centos/6/isos/x86_64/.
+   When this guide was written, 6.6 was the current version. Bring
+   your installation up to date after installation (e.g., `yum
+   upgrade`) and reboot. After rebooting, reinstall VMWare tools.
 
 2. Add the EPEL repository, which allows yum to install a wider set of
    packages. The instructions below are taken from
@@ -62,15 +63,17 @@ Installation instructions
    problem.
 
 8. Set the `CTF_DIR` environment variable and add the CTF tools to
-    your `PATH`. If you use bash, you can simply add the following to
-    the end of your .bashrc file. If you want to customize where the
-    CTF tools look for files, set `CTF_DATADIR` and `CTF_WORKDIR`.
+   your `PATH`. If you use bash, you can simply add the following to
+   the end of your .bashrc file. If you want to customize where the
+   CTF tools look for files, set `CTF_DATADIR` and `CTF_WORKDIR`.
+
     ```
     export CTF_DIR=/opt/ctf
     export PATH=$PATH:$CTF_DIR/bin
     ```
 
 9. Restart and log back in. Everything should work at this point.
+
 
 Notes
 =====
@@ -82,5 +85,13 @@ Notes
 2. The packages installed (`ctf_prereqs.txt`) are not guaranteed to be
    a minimal set, but they do appear to be adequate.
 
-3. Although xprint is installed in the procedure above, printing from
-   the CTF programs does not appear to work.
+3. Printing from the CTF programs does not appear to work, but it's
+   possible that if you install xprint and configure it properly, it
+   may work.
+
+4. If you run `yum upgrade` in the future, it will replace
+   openmotif21 with lesstif. This is not a problem.
+
+5. While the CTF software can be installed on a 64-bit machine, some
+   network file access will fail. I highly recommend sticking to the
+   32-bit installation outlined above.
